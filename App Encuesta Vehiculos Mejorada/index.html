@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Encuesta sobre vehículos</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="home-page">
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">Encuesta sobre vehículos</a>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="index.html" aria-current="page">Inicio</a>
+      <a data-survey-link href="encuesta.html?tipo=autos">Automóviles</a>
+      <a data-survey-link href="encuesta.html?tipo=camionetas">Camionetas</a>
+      <a data-survey-link href="encuesta.html?tipo=camiones">Camiones</a>
+      <a data-survey-link href="encuesta.html?tipo=motos">Motos</a>
+      <span class="user-chip" data-auth-only>Hola, <span data-current-user></span></span>
+      <button data-auth-only data-logout>Cerrar sesión</button>
+      <a data-guest-only href="login.html">Login</a>
+      <a data-guest-only href="registro.html">Registrarse</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <h1>Encuesta sobre vehículos</h1>
+        <p>Participa en encuestas sobre automóviles, camionetas, camiones y motos. Responde cinco preguntas por categoría y consulta tus respuestas y las estadísticas acumuladas.</p>
+        <div class="actions">
+          <a class="btn btn-primary" data-guest-only href="registro.html">Crear cuenta</a>
+          <a class="btn btn-secondary" data-guest-only href="login.html">Iniciar sesión</a>
+          <a class="btn btn-secondary" data-auth-only data-survey-link href="encuesta.html?tipo=autos">Comenzar encuesta</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Elige una categoría</h2>
+      <div class="grid">
+        <article class="card"><h3>Automóviles</h3><p>Preferencias de marca, modelo, color, motorización y caja de cambios.</p><a class="btn btn-primary" data-survey-link href="encuesta.html?tipo=autos">Participar</a></article>
+        <article class="card"><h3>Camionetas</h3><p>Marca, configuración, lugar de uso, trabajo y combustible preferido.</p><a class="btn btn-primary" data-survey-link href="encuesta.html?tipo=camionetas">Participar</a></article>
+        <article class="card"><h3>Camiones</h3><p>Marca, potencia, tipo de carga, distancias y caja de cambios.</p><a class="btn btn-primary" data-survey-link href="encuesta.html?tipo=camiones">Participar</a></article>
+        <article class="card"><h3>Motos</h3><p>Marca, tipo, cilindrada, uso y entorno preferido.</p><a class="btn btn-primary" data-survey-link href="encuesta.html?tipo=motos">Participar</a></article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="container">Proyecto de encuesta sobre vehículos · Versión refactorizada</div></footer>
+<script type="module" src="js/home.js"></script>
+</body>
+</html>
